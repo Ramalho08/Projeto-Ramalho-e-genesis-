@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "sourceMap": true,
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "rootDir": "src",
+    "ignoreDeprecations": "6.0"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
