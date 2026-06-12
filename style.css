@@ -1,0 +1,164 @@
+:root {
+    --primary: #2ecc71;
+    --primary-dark: #27ae60;
+    --danger: #e74c3c;
+    --dark: #2c3e50;
+    --light: #f8f9fa;
+    --gray: #bdc3c7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: var(--dark);
+}
+
+header {
+    background-color: var(--dark);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+nav button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    color: var(--primary);
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Sistema de Troca de Páginas */
+.pagina {
+    display: none;
+}
+
+.pagina.ativa {
+    display: block;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+input, button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+.resumo-rapido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    border-top: 5px solid var(--primary);
+}
+
+.box.despesa { border-top-color: var(--danger); }
+.box.saldo { border-top-color: var(--dark); }
+
+.lista-gastos {
+    list-style: none;
+}
+
+.lista-gastos li {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.lista-gastos span.valor {
+    color: var(--danger);
+    font-weight: bold;
+}
+
+.resumo-final p {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.saldo-final {
+    font-size: 1.3rem !important;
+    margin-top: 0.8rem;
+}
+
+.dicas p {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--gray);
+}
+
+.dicas p:last-child { border: none; }
+
+.btn-limpar {
+    background-color: var(--danger);
+    margin-top: 2rem;
+}
+.btn-limpar:hover {
+    background-color: #c0392b;
+}
