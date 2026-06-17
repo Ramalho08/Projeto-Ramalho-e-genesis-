@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramalho & Genesis Finance Pro</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<header>
+<h1>💰 Ramalho & Genesis Finance Pro</h1>
+<button onclick="toggleTheme()">🌙 Tema</button>
+</header>
+
+<section class="grid">
+<div class="card"><h3>Renda</h3><p id="renda">R$ 0</p></div>
+<div class="card"><h3>Gastos</h3><p id="gastos">R$ 0</p></div>
+<div class="card"><h3>Saldo</h3><p id="saldo">R$ 0</p></div>
+<div class="card"><h3>Meta</h3><p id="metaStatus">Não definida</p></div>
+</section>
+
+<section class="card">
+<h2>Configurações Financeiras</h2>
+<input id="salario" type="number" placeholder="Renda mensal">
+<input id="meta" type="number" placeholder="Meta de economia">
+<button onclick="salvarConfiguracoes()">Salvar</button>
+</section>
+
+<section class="card">
+<h2>Adicionar gasto</h2>
+<input id="descricao" placeholder="Descrição">
+<input id="valor" type="number" placeholder="Valor">
+<select id="categoria">
+<option>Alimentação</option>
+<option>Transporte</option>
+<option>Moradia</option>
+<option>Lazer</option>
+<option>Educação</option>
+<option>Saúde</option>
+<option>Outros</option>
+</select>
+<button onclick="adicionarGasto()">Adicionar</button>
+</section>
+
+<section class="card">
+<h2>Gastos</h2>
+<ul id="lista"></ul>
+</section>
+
+<section class="card">
+<h2>Histórico Mensal</h2>
+<button onclick="fecharMes()">Fechar mês</button>
+<ul id="historico"></ul>
+</section>
+
+<section class="card">
+<h2>Gráfico por Categoria</h2>
+<canvas id="grafico"></canvas>
+</section>
+
+<script src="app.js"></script>
+</body>
+</html>
